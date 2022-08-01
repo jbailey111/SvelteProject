@@ -23,7 +23,7 @@
   </p>
 
   <p class="read-the-docs">
-    Click on the Vite and Svelte logos to learn more
+    hello world
   </p>
 </main>
 
