@@ -1,7 +1,12 @@
 nav{
-    padding:10px;
     height: 6rem;
     background-color:#f73c00;
+}
+
+.logo {
+    width:80px;
+    height:80px;
+    cursor:pointer;
 }
 
 .navbar {
@@ -46,19 +51,21 @@ nav{
     font-size: 1.2rem;
     font-weight: bold;
     cursor: pointer;
+    user-select: none;
+
+    &:hover {
+        background-color: #fff;
+        color: #f73c00;
+    }
+}
+
+.user-controls {
+    height:100%;
+    line-height: 4rem;
 }
 
 .icons {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
-}
-
-.basket-text {
-    text-align: center;
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.2rem;
-    font-weight: bold;
-    cursor: pointer;
 }

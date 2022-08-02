@@ -1,14 +1,16 @@
-<script>
+<script lang="ts">
   import "./Header.scss";
+
+
 </script>
 
-<div>
-  <div class="basket">
-    <div>
+<div class="basket">
+  <div on:click={increment}>
+    <div style="cursor: pointer;">
       <span class="basket-text">Basket</span>
     </div>
-    <div>
-      <span class="basket-text">0</span>
+    <div style="cursor: pointer;">
+      <span class="basket-text">{basketItems}</span>
     </div>
   </div>
 </div>
