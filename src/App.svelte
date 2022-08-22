@@ -1,12 +1,19 @@
 <script lang="ts">
-  import Header from "./lib/Header/Header.svelte";
+    import Header from './components/Header/Header.svelte';
+    import Counter from './components/Counter.svelte';
+    import { Router, Link, Route } from 'svelte-routing';
+    import ProductPage from './pages/ProductPage/ProductPage.svelte';
+
+    export let url: string = '';
 </script>
 
-<main>
-  <div class="box">
-    <Header />
-  </div>
-</main>
+<Router {url}>
+    <div>
+        <Header />
+        <Route path="/" component={ProductPage} />
+        <Route path="/counter" component={Counter} />
+    </div>
+</Router>
 
 <style>
 </style>
