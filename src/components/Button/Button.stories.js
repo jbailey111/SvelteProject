@@ -12,7 +12,7 @@ export const Default = () => ({
         styles: {
             color: 'blue',
             width: '100px',
-            height: '100px',
+            height: '30px',
         },
     },
 });
@@ -20,11 +20,36 @@ export const Default = () => ({
 export const Warning = () => ({
     Component: Button,
     props: {
-        label: 'Button',
+        label: 'Warning ',
         styles: {
             color: 'red',
             width: '100px',
-            height: '100px',
+            height: '30px',
+        },
+    },
+});
+
+export const MaxWidth = () => ({
+    Component: Button,
+    props: {
+        label: 'Large',
+        styles: {
+            color: 'blue',
+            width: '300px',
+            height: '30px',
+        },
+    },
+});
+
+export const rounded = () => ({
+    Component: Button,
+    props: {
+        label: 'Rounded',
+        styles: {
+            color: 'lightgreen',
+            width: '100px',
+            height: '30px',
+            radius: true,
         },
     },
 });
