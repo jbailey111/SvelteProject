@@ -1,0 +1,37 @@
+.options-wrapper {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+}
+
+.options {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+}
+
+.options > div {
+    &:hover {
+        cursor: pointer;
+        border: 1px solid #000; 
+        width:48px;
+        height:48px;
+    }
+}
+
+.option-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #000;
+}
+
+.options-title-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
