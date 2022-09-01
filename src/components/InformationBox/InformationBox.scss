@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.product-info-box{
+    display:flex;
+    flex-direction:column;
+    width:370px;
+    height:auto;
+    background-color:#fff;
+    font-family: roboto;
+}
+
+.product-reviews{
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+    margin-top:12px;
+}   
+
+.product-title-text {
+    font-size:20px;
+    font-weight:lighter;
+    color:#312f2f;
+}
+
+.product-info-price{ 
+    display:flex;
+    flex-direction:row;
+    margin-top:12px;
+}
+
+.product-info-price > div{
+    display:flex;
+    flex-direction:column;
+    margin-right:20px;
+    font-size:1.1em;
+}
+
+.normal-price{
+    font-weight:bold;
+
+    color:#000;
+}
+
+.strike{
+    text-decoration:line-through;
+
+}
+
+.reduced-price{
+font-weight:bold;
+    color:red;
+}
+
+.product-info-reduction {
+    margin-top:12px;
+    color: red  ;
+}
+
+.info-container{
+    margin-bottom: 1em;
+
+}
