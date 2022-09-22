@@ -14,9 +14,8 @@
         height: 100%;
         display: flex;
         flex-direction: row;
-        justify-content: center;
-        align-items: center;
         box-sizing: border-box;
         padding: 50px 200px;
+        justify-content: center;
     }
 </style>
