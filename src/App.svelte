@@ -6,8 +6,6 @@
     import { setCookie } from './shared/cookies';
 
     export let url: string = '';
-    //create a cart cookie
-    setCookie('cart', JSON.stringify([]), 1);
 </script>
 
 <Router {url}>
