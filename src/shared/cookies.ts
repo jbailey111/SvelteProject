@@ -17,8 +17,21 @@ export const getCookie = (name: string) => {
     return null;
 }
 
+export const getJsonCookie = (name: string) => {
+    const cookie = getCookie(name);
+    if (cookie) {
+        return JSON.parse(cookie);
+    }
+    return null;
+}
+
 export const eraseCookie = (name: string) => {
     document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;`;
 }   
 
-    
+export type CartType = {
+    id: number;
+    quantity: number;
+    name: string;
+    price: number;
+}

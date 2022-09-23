@@ -6,6 +6,7 @@
     import OptionSelector from '@/components/OptionSelector/OptionSelector.svelte';
     import SectionBreak from '@/components/SectionBreak/SectionBreak.svelte';
     import DeliveryEstimate from './DeliveryEstimate.svelte';
+    import { cartStore } from '@/shared/stores';
 
     const handleAddToCart = () => {
         //if the item is already in the cart, increase the quantity
@@ -23,6 +24,21 @@
             });
         }
         setCookie('cart', JSON.stringify(cartItems), 1);
+        //update the cart store by finding the item in the cart and increasing the quantity
+        cartStore.update((cart) => {
+            const item = cart.find((item) => item.id === 1);
+            if (item) {
+                item.quantity++;
+            } else {
+                cart.push({
+                    id: 1,
+                    quantity: 1,
+                    name: 'watch',
+                    price: 100,
+                });
+            }
+            return cart;
+        });
     };
 </script>
 
