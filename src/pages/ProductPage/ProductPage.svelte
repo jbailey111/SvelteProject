@@ -1,10 +1,10 @@
 <script lang="ts">
-    import ProductDetails from './ProductDetails.svelte';
+    import ProductImages from './ProductImages.svelte';
     import ProductInfo from './ProductInfo.svelte';
 </script>
 
 <div class="wrapper">
-    <ProductDetails />
+    <ProductImages />
     <ProductInfo />
 </div>
 
