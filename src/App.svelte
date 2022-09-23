@@ -1,10 +1,9 @@
 <script lang="ts">
     import Header from './components/Header/Header.svelte';
     import Counter from './components/Counter.svelte';
-    import { Router, Link, Route } from 'svelte-routing';
-    import ProductPage from './pages/ProductPage/ProductPage.svelte';
+    import { Router, Route } from 'svelte-routing';
     import { cartStore } from '@/shared/stores';
-    import Home from './pages/Home/Home.svelte';
+    import { default as routes } from './pages/routes';
 
     export let url: string = '';
     let cart;
@@ -27,8 +26,9 @@
 <Router {url}>
     <div>
         <Header {basketItems} />
-        <Route path="/" component={Home} />
-        <Route path="/" component={ProductPage} />
+        {#each routes as route}
+            <Route path={route.path} component={route.component} />
+        {/each}
         <Route path="/counter" component={Counter} />
     </div>
 </Router>
