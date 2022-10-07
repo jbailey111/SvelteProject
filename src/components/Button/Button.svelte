@@ -6,8 +6,12 @@
         radius?: boolean;
     };
     export let label: string;
-    export let styles: ButtonStyles;
-    export let onClick: () => void;
+    export let styles: ButtonStyles = {
+        color: 'black',
+        width: '100px',
+        height: '50px',
+    };
+    export let onClick: () => void = () => {};
 </script>
 
 <div

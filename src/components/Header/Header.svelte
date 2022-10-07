@@ -2,8 +2,6 @@
     import './Header.scss';
     import logo from '../../assets/logo.svg';
     import Menu from './Menu.svelte';
-    import { getJsonCookie } from '@/shared/cookies';
-    import type { CartType } from '@/shared/cookies';
 
     export let basketItems: number = 0;
     let hoverHome: boolean = false;
@@ -20,7 +18,7 @@
 <nav>
     <div class="navbar">
         <div class="nav-item">
-            <img src={logo} alt={'svelte logo'} class="logo" />
+            <img src={logo} alt={'svelte logo'} href={'/'} class="logo" />
         </div>
         <div class="nav-item">
             <span class="title">Svelte Shop</span>

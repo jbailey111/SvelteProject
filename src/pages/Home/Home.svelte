@@ -1,4 +1,5 @@
 <script lang="ts">
+    import Hero from './Hero.svelte';
 </script>
 
-<div>Home page</div>
+<Hero />
