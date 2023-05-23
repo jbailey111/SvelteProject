@@ -1,9 +1,13 @@
 <script>
     import Button from '@/components/Button/Button.svelte';
+    import hero from '@/assets/hero.mp4';
 </script>
 
 <div class="Hero-wrapper">
-    <div class="background" />
+    <video class="background" autoplay loop muted>
+        <source src={hero} type="video/mp4" />
+        Your browser does not support the video tag.
+    </video>
     <h1>Svelte shop</h1>
     <p class="subheading">A place to buy all of your random crap</p>
     <Button
@@ -20,12 +24,13 @@
 <style lang="scss">
     .background {
         position: absolute;
-        top: 0;
+        top: 108;
         left: 0;
         width: 100%;
-        height: 100%;
+        height: 70vh;
         opacity: 0.5;
         z-index: -1;
+        object-fit: cover;
     }
     .Hero-wrapper {
         width: 100%;
